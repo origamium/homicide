@@ -1,19 +1,18 @@
-import * as React from "react"
+import * as React from "react";
+import { css } from "@emotion/react";
 
 export default function Home() {
-  return (
-      <main>
-          <header>
-              <h1>
-
-              Kill API
-
-              </h1>
-              <h2>
-
-              Fully-managed killer service
-              </h2>
-          </header>
-      </main>
-  )
+    return (
+        <>
+            <header
+                className="container"
+                css={css`
+                    display: block;
+                `}
+            >
+                <h1>Killify</h1>
+                <h2>Kill anything. For everyone.</h2>
+            </header>
+        </>
+    );
 }
