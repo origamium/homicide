@@ -1,50 +1,42 @@
 import * as React from "react";
 import Image from "next/image";
 import { css } from "@emotion/react";
+import { FeatureBox } from "./components/FeatureBox";
 
 const Index = () => {
     return (
         <div>
             <header>
-                <div
-                    className="flex justify-center p-4"
-                    css={css`
-                        background-color: #ff5500;
-                    `}
-                >
+                <div className="flex justify-center p-4">
                     <Image src="/stab-wounds.svg" width={140} height={"140"} />
-                    <div className="sm:max-w-xs md:max-w-max">
+                    <div className="sm:max-w-xs md:max-w-max pl-4">
                         <h1 className="text-6xl font-bold md:pt-8">Killify</h1>
-                        <h2 className="text-2xl py-2">セキュアでスケーラブルなフルマネージドkillサービス</h2>
+                        <h2 className="text-2xl py-2">セキュアでスケーラブルなフルマネージドキルサービス</h2>
                     </div>
                 </div>
             </header>
-            <main
-                className="flex flex-col items-center w-screen"
-                css={css`
-                    background-image: url("/background.svg");
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                `}
-            >
+            <main className="flex flex-col gap-4 items-center w-screen">
                 <h3 className="text-2xl font-bold">Features</h3>
                 <p className="text-3xl text-center">
-                    コンピューター上のタスクのkillから野犬の安楽死 <br />
+                    コンピューター上のタスクキルから野犬の安楽死 <br />
                     見せしめから事故に見せかけた殺人をどこからでも簡単に実行
                 </p>
-                <div>
-                    <article>
-                        <h4 className="text-xl">EVERYONE</h4>
-                        <p>人種、宗教、年齢、所属組織に関係なく即座にkillサービス展開が可能。</p>
-                    </article>
-                    <article>
-                        <h4 className="text-xl">ELASTIC</h4>
-                        <p>1件の殺人から大規模虐殺までのkillタスクのスケーリングが可能。</p>
-                    </article>
-                    <article>
-                        <h4 className="text-xl">IMMUNITY</h4>
-                        <p>killifyではすべてのプランにおいて、すべての国において刑事免責保証が適用可能です。</p>
-                    </article>
+
+                <div>{/* country */}</div>
+
+                <div className="flex justify-around gap-3">
+                    <FeatureBox
+                        title={"誰でも利用可能"}
+                        text={`我々はお客様を差別することはいたしません。カルテルやISIL、や共産党幹部、ダウン症の未就学児、統合失調症患者にもお使いいただけます。`}
+                    />
+                    <FeatureBox
+                        title={"スケーラビリティ"}
+                        text={`個人のお客様の1件からのキルから、数千～数万件の大規模な虐殺が利用可能です。さらにご希望のお客様には化学兵器や核の保有と使用も可能です。`}
+                    />
+                    <FeatureBox
+                        title={"刑事免責保証"}
+                        text={`お客様の利用状態によって刑事責任が発生する場合においてもkillifyでは刑事免責保証のサポートにより、お客様を安全な状態に保ちます。`}
+                    />
                 </div>
                 <h3 className="text-2xl text-center">Pricing</h3>
                 <div>
