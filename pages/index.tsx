@@ -2,37 +2,37 @@ import * as React from "react";
 import Image from "next/image";
 import { css } from "@emotion/react";
 
-export default function Home() {
+const Index = () => {
     return (
-        <div className="">
-            <header
-                className="p-1 flex justify-around"
-                css={css`
-                    height: 600px;
-                `}
-            >
-                <div>
-                    <h1 className="text-4xl">Killify</h1>{" "}
-                    <h2 className="text-2xl">セキュアでスケーリングが容易なフルマネージド型killサービス</h2>
-                </div>
-                <div>
-                    <Image
-                        src="/stab-wounds.svg"
-                        width={240}
-                        height={240}
-                        css={css`
-                            fill: black;
-                        `}
-                    />
+        <div>
+            <header>
+                <div
+                    className="flex justify-center p-4"
+                    css={css`
+                        background-color: #ff5500;
+                    `}
+                >
+                    <Image src="/stab-wounds.svg" width={140} height={"140"} />
+                    <div className="sm:max-w-xs md:max-w-max">
+                        <h1 className="text-6xl font-bold md:pt-8">Killify</h1>
+                        <h2 className="text-2xl py-2">セキュアでスケーラブルなフルマネージドkillサービス</h2>
+                    </div>
                 </div>
             </header>
-            <main>
-                <h3 className="text-2xl text-center">Features</h3>
+            <main
+                className="flex flex-col items-center w-screen"
+                css={css`
+                    background-image: url("/background.svg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                `}
+            >
+                <h3 className="text-2xl font-bold">Features</h3>
+                <p className="text-3xl text-center">
+                    コンピューター上のタスクのkillから野犬の安楽死 <br />
+                    見せしめから事故に見せかけた殺人をどこからでも簡単に実行
+                </p>
                 <div>
-                    <article>
-                        <h4 className="text-xl">ANYTHING</h4>
-                        <p>コンピュータ上のプロセスのkillから獣類の間引き、殺人までサポートします。</p>
-                    </article>
                     <article>
                         <h4 className="text-xl">EVERYONE</h4>
                         <p>人種、宗教、年齢、所属組織に関係なく即座にkillサービス展開が可能。</p>
@@ -46,7 +46,24 @@ export default function Home() {
                         <p>killifyではすべてのプランにおいて、すべての国において刑事免責保証が適用可能です。</p>
                     </article>
                 </div>
+                <h3 className="text-2xl text-center">Pricing</h3>
+                <div>
+                    <article>
+                        <h4>Free</h4>
+                    </article>
+                    <article>
+                        <h4>Professional</h4>
+                    </article>
+                    <article>
+                        <h4>Enterprise</h4>
+                    </article>
+                    <article>
+                        <h4>Government</h4>
+                    </article>
+                </div>
             </main>
         </div>
     );
-}
+};
+
+export default Index;
